@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20200830 19:00:52.296" rpa="false">
+<suite id="s1" name="careersTest &amp; feedbackTest">
+<suite id="s1-s1" name="careersTest" source="C:\Users\AbdElAziz\PycharmProjects\POM_robotFW\tests\careersTest.robot">
+<kw name="Run Keywords" library="BuiltIn" type="setup">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Navigate To Homepage</arg>
+</arguments>
+<kw name="Navigate To Homepage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${aut_Url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200830 19:00:52.874" level="INFO">Opening browser 'chrome' to base url 'https://www.otlob.com/egypt'.</msg>
+<status status="PASS" starttime="20200830 19:00:52.874" endtime="20200830 19:01:01.727"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200830 19:01:01.727" endtime="20200830 19:01:04.034"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>${imp_wait}</arg>
+</arguments>
+<status status="PASS" starttime="20200830 19:01:04.034" endtime="20200830 19:01:04.034"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:00:52.874" endtime="20200830 19:01:04.034"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:00:52.874" endtime="20200830 19:01:04.034"></status>
+</kw>
+<test id="s1-s1-t1" name="Test clicking career link">
+<kw name="click career link" library="homePage">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${careerFromBar}</arg>
+</arguments>
+<status status="PASS" starttime="20200830 19:01:04.034" endtime="20200830 19:01:04.369"></status>
+</kw>
+<kw name="click from page" library="seleniumBF">
+<arguments>
+<arg>${careerFromBar}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20200830 19:01:04.369" level="INFO">Clicking element '//section[@class='footerlinks p-y-lg hidden-xs']//a[@href='/egypt/career' and contains(text(), 'Careers')]'.</msg>
+<status status="PASS" starttime="20200830 19:01:04.369" endtime="20200830 19:01:05.622"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:01:04.369" endtime="20200830 19:01:05.622"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:01:04.034" endtime="20200830 19:01:05.622"></status>
+</kw>
+<kw name="Location Should Contain" library="SeleniumLibrary">
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<arguments>
+<arg>career</arg>
+</arguments>
+<msg timestamp="20200830 19:01:05.634" level="INFO">Current location contains 'career'.</msg>
+<status status="PASS" starttime="20200830 19:01:05.622" endtime="20200830 19:01:05.634"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:01:04.034" endtime="20200830 19:01:05.634" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="fill career form without uploading CV">
+<kw name="Send text to element" library="seleniumBF">
+<arguments>
+<arg>${firstNameBox}</arg>
+<arg>${firstNameData}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20200830 19:01:05.752" level="INFO">Typing text 'Ahmed' into text field '//input[@id='firstname']'.</msg>
+<status status="PASS" starttime="20200830 19:01:05.752" endtime="20200830 19:01:06.163"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:01:05.752" endtime="20200830 19:01:06.163"></status>
+</kw>
+<kw name="Send text to element" library="seleniumBF">
+<arguments>
+<arg>${lastNameBox}</arg>
+<arg>${lastNameData}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20200830 19:01:06.167" level="INFO">Typing text 'Ali' into text field '//input[@id='lastname']'.</msg>
+<status status="PASS" starttime="20200830 19:01:06.163" endtime="20200830 19:01:06.274"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:01:06.163" endtime="20200830 19:01:06.274"></status>
+</kw>
+<kw name="Send text to element" library="seleniumBF">
+<arguments>
+<arg>${mobileNumberBox}</arg>
+<arg>${jobTitleData}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20200830 19:01:06.278" level="INFO">Typing text 'Doctor' into text field '//input[@id='mobile']'.</msg>
+<status status="PASS" starttime="20200830 19:01:06.278" endtime="20200830 19:01:06.394"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:01:06.278" endtime="20200830 19:01:06.394"></status>
+</kw>
+<kw name="Send text to element" library="seleniumBF">
+<arguments>
+<arg>${jobTitleBox}</arg>
+<arg>${mobileNumberData}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20200830 19:01:06.398" level="INFO">Typing text '010000' into text field '//input[@id='jobtitle']'.</msg>
+<status status="PASS" starttime="20200830 19:01:06.398" endtime="20200830 19:01:06.516"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:01:06.394" endtime="20200830 19:01:06.516"></status>
+</kw>
+<kw name="Send text to element" library="seleniumBF">
+<arguments>
+<arg>${emailBox}</arg>
+<arg>${emailData}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20200830 19:01:06.516" level="INFO">Typing text 'AhmedAli@gmail.com' into text field '//input[@id='email']'.</msg>
+<status status="PASS" starttime="20200830 19:01:06.516" endtime="20200830 19:01:06.691"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:01:06.516" endtime="20200830 19:01:06.691"></status>
+</kw>
+<kw name="click from page" library="seleniumBF">
+<arguments>
+<arg>${submitButn}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20200830 19:01:06.691" level="INFO">Clicking element '//button[@class='btn p-x-lg green text-uppercase' and contains(text(),'Submit' )]'.</msg>
+<status status="PASS" starttime="20200830 19:01:06.691" endtime="20200830 19:01:06.780"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:01:06.691" endtime="20200830 19:01:06.780"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${cv_ErrMsg}</arg>
+</arguments>
+<msg timestamp="20200830 19:01:06.824" level="INFO">Current page contains element '//label[@id='cvfile-error' and contains(text(), 'This field is required.')]'.</msg>
+<status status="PASS" starttime="20200830 19:01:06.792" endtime="20200830 19:01:06.824"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:01:05.752" endtime="20200830 19:01:06.824" critical="yes"></status>
+</test>
+<test id="s1-s1-t3" name="fill career form and uploading CV">
+<kw name="Send text to element" library="seleniumBF">
+<arguments>
+<arg>${firstNameBox}</arg>
+<arg>${firstNameData}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20200830 19:01:06.829" level="INFO">Typing text 'Ahmed' into text field '//input[@id='firstname']'.</msg>
+<status status="PASS" starttime="20200830 19:01:06.829" endtime="20200830 19:01:06.954"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:01:06.829" endtime="20200830 19:01:06.954"></status>
+</kw>
+<kw name="Send text to element" library="seleniumBF">
+<arguments>
+<arg>${lastNameBox}</arg>
+<arg>${lastNameData}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20200830 19:01:06.954" level="INFO">Typing text 'Ali' into text field '//input[@id='lastname']'.</msg>
+<status status="PASS" starttime="20200830 19:01:06.954" endtime="20200830 19:01:07.046"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:01:06.954" endtime="20200830 19:01:07.046"></status>
+</kw>
+<kw name="Send text to element" library="seleniumBF">
+<arguments>
+<arg>${mobileNumberBox}</arg>
+<arg>${jobTitleData}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20200830 19:01:07.046" level="INFO">Typing text 'Doctor' into text field '//input[@id='mobile']'.</msg>
+<status status="PASS" starttime="20200830 19:01:07.046" endtime="20200830 19:01:07.150"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:01:07.046" endtime="20200830 19:01:07.150"></status>
+</kw>
+<kw name="Send text to element" library="seleniumBF">
+<arguments>
+<arg>${jobTitleBox}</arg>
+<arg>${mobileNumberData}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20200830 19:01:07.150" level="INFO">Typing text '010000' into text field '//input[@id='jobtitle']'.</msg>
+<status status="PASS" starttime="20200830 19:01:07.150" endtime="20200830 19:01:07.244"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:01:07.150" endtime="20200830 19:01:07.244"></status>
+</kw>
+<kw name="Send text to element" library="seleniumBF">
+<arguments>
+<arg>${emailBox}</arg>
+<arg>${emailData}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20200830 19:01:07.248" level="INFO">Typing text 'AhmedAli@gmail.com' into text field '//input[@id='email']'.</msg>
+<status status="PASS" starttime="20200830 19:01:07.248" endtime="20200830 19:01:07.371"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:01:07.244" endtime="20200830 19:01:07.371"></status>
+</kw>
+<kw name="upload cv to career form" library="careerPage">
+<kw name="Choose File" library="SeleniumLibrary">
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<arguments>
+<arg>${cv_uploader}</arg>
+<arg>${cv_path}</arg>
+</arguments>
+<msg timestamp="20200830 19:01:07.371" level="INFO">Sending C:\Users\AbdElAziz\PycharmProjects\POM_robotFW\uploads\emptyCV.txt to browser.</msg>
+<status status="PASS" starttime="20200830 19:01:07.371" endtime="20200830 19:01:07.420"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:01:07.371" endtime="20200830 19:01:07.420"></status>
+</kw>
+<kw name="click from page" library="seleniumBF">
+<arguments>
+<arg>${submitButn}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20200830 19:01:07.424" level="INFO">Clicking element '//button[@class='btn p-x-lg green text-uppercase' and contains(text(),'Submit' )]'.</msg>
+<status status="PASS" starttime="20200830 19:01:07.424" endtime="20200830 19:01:08.204"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:01:07.424" endtime="20200830 19:01:08.204"></status>
+</kw>
+<kw name="Location Should Contain" library="SeleniumLibrary">
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<arguments>
+<arg>${firstNameData}</arg>
+</arguments>
+<msg timestamp="20200830 19:01:08.212" level="INFO">Current location contains 'Ahmed'.</msg>
+<status status="PASS" starttime="20200830 19:01:08.208" endtime="20200830 19:01:08.212"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:01:06.829" endtime="20200830 19:01:08.216" critical="yes"></status>
+</test>
+<kw name="Exit These Tests" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200830 19:01:08.216" endtime="20200830 19:01:11.835"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:01:08.216" endtime="20200830 19:01:11.835"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:00:52.327" endtime="20200830 19:01:11.835"></status>
+</suite>
+<suite id="s1-s2" name="feedbackTest" source="C:\Users\AbdElAziz\PycharmProjects\POM_robotFW\tests\feedbackTest.robot">
+<kw name="Run Keywords" library="BuiltIn" type="setup">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Navigate To Homepage</arg>
+</arguments>
+<kw name="Navigate To Homepage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${aut_Url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200830 19:01:11.851" level="INFO">Opening browser 'chrome' to base url 'https://www.otlob.com/egypt'.</msg>
+<status status="PASS" starttime="20200830 19:01:11.851" endtime="20200830 19:01:17.588"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200830 19:01:17.588" endtime="20200830 19:01:19.752"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>${imp_wait}</arg>
+</arguments>
+<status status="PASS" starttime="20200830 19:01:19.752" endtime="20200830 19:01:19.768"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:01:11.851" endtime="20200830 19:01:19.768"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:01:11.851" endtime="20200830 19:01:19.768"></status>
+</kw>
+<test id="s1-s2-t1" name="Test clicking feedback link">
+<kw name="click feedback link" library="homePage">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${feedbackFromBar}</arg>
+</arguments>
+<status status="PASS" starttime="20200830 19:01:19.768" endtime="20200830 19:01:20.086"></status>
+</kw>
+<kw name="click from page" library="seleniumBF">
+<arguments>
+<arg>${feedbackFromBar}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20200830 19:01:20.086" level="INFO">Clicking element '//section[@class='footerlinks p-y-lg hidden-xs']//a[@href='/egypt/feedback' and contains(text(), 'Feedback')]'.</msg>
+<status status="PASS" starttime="20200830 19:01:20.086" endtime="20200830 19:01:21.964"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:01:20.086" endtime="20200830 19:01:21.964"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:01:19.768" endtime="20200830 19:01:21.964"></status>
+</kw>
+<kw name="Location Should Contain" library="SeleniumLibrary">
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<arguments>
+<arg>feedback</arg>
+</arguments>
+<msg timestamp="20200830 19:01:21.976" level="INFO">Current location contains 'feedback'.</msg>
+<status status="PASS" starttime="20200830 19:01:21.964" endtime="20200830 19:01:21.976"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:01:19.768" endtime="20200830 19:01:21.980" critical="yes"></status>
+</test>
+<test id="s1-s2-t2" name="Test filling feedback form without reCaptcha">
+<kw name="click from page" library="seleniumBF">
+<arguments>
+<arg>${extremeSatisfac}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20200830 19:01:21.984" level="INFO">Clicking element '//div[@class='exp extreme']//button[contains(text(), 'Extremely Satisfied')]'.</msg>
+<status status="PASS" starttime="20200830 19:01:21.984" endtime="20200830 19:01:22.216"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:01:21.984" endtime="20200830 19:01:22.220"></status>
+</kw>
+<kw name="click from page" library="seleniumBF">
+<arguments>
+<arg>${effort_2}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20200830 19:01:22.220" level="INFO">Clicking element '//html//body//section//div[2]//div//div[1]//section[2]//div[2]//div[2]//button'.</msg>
+<status status="PASS" starttime="20200830 19:01:22.220" endtime="20200830 19:01:22.316"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:01:22.220" endtime="20200830 19:01:22.320"></status>
+</kw>
+<kw name="click from page" library="seleniumBF">
+<arguments>
+<arg>${recommend_8}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20200830 19:01:22.320" level="INFO">Clicking element '//html//body//section//div[2]//div//div[1]//section[3]//div[2]//div[9]//button'.</msg>
+<status status="PASS" starttime="20200830 19:01:22.320" endtime="20200830 19:01:22.411"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:01:22.320" endtime="20200830 19:01:22.411"></status>
+</kw>
+<kw name="click from page" library="seleniumBF">
+<arguments>
+<arg>${reviewBox}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20200830 19:01:22.415" level="INFO">Clicking element '//textarea[@id='feedback-text']'.</msg>
+<status status="PASS" starttime="20200830 19:01:22.415" endtime="20200830 19:01:22.487"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:01:22.415" endtime="20200830 19:01:22.491"></status>
+</kw>
+<kw name="click from page" library="seleniumBF">
+<arguments>
+<arg>${submitButton}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<msg timestamp="20200830 19:01:22.491" level="INFO">Clicking element '//button[@id='submit-feedback']'.</msg>
+<status status="PASS" starttime="20200830 19:01:22.491" endtime="20200830 19:01:22.575"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:01:22.491" endtime="20200830 19:01:22.575"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${reCap_ErrMsg}</arg>
+</arguments>
+<msg timestamp="20200830 19:01:22.591" level="INFO">Current page contains element '//p[@id='feedback-recaptcha-error']'.</msg>
+<status status="PASS" starttime="20200830 19:01:22.575" endtime="20200830 19:01:22.591"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:01:21.980" endtime="20200830 19:01:22.591" critical="yes"></status>
+</test>
+<kw name="Exit These Tests" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200830 19:01:22.595" endtime="20200830 19:01:26.215"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:01:22.595" endtime="20200830 19:01:26.215"></status>
+</kw>
+<status status="PASS" starttime="20200830 19:01:11.835" endtime="20200830 19:01:26.215"></status>
+</suite>
+<status status="PASS" starttime="20200830 19:00:52.296" endtime="20200830 19:01:26.246"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0">Critical Tests</stat>
+<stat pass="5" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" id="s1" name="careersTest &amp; feedbackTest">careersTest &amp; feedbackTest</stat>
+<stat pass="3" fail="0" id="s1-s1" name="careersTest">careersTest &amp; feedbackTest.careersTest</stat>
+<stat pass="2" fail="0" id="s1-s2" name="feedbackTest">careersTest &amp; feedbackTest.feedbackTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
