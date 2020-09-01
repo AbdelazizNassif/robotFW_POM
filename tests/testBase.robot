@@ -1,9 +1,10 @@
 *** Settings ***
 Library  SeleniumLibrary
 
-Suite Setup  Run Keywords   Navigate To Homepage
-Suite Teardown  Exit Selenium
+*** Variables ***
+#Test Environment
+${aut_Url}=  https://www.otlob.com/egypt
+${browser}=  chrome
+${imp_wait}=  10
+${sele_speed}=  0.15
 
-*** Keywords ***
-Navigate To Homepage
-    Open Browser  https://www.otlob.com/egypt  chrome

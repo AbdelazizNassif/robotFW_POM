@@ -4,10 +4,8 @@ Library  Collections
 Library  String
 
 *** Variables ***
-
 #Global var for Asisstance in test data generation
-@{JOB_TITLES}    Elect Engineer  Software Tester  Quality Control Engineer  Teacher
-
+@{JOB_TITLES}    Elect Engineer  Software Tester  Quality Control Engineer  Teacher  Doctor  Vet  Freelancer  Civil Eng  HR Manager
 
 *** Keywords ***
 generateRandomPhoneNumber

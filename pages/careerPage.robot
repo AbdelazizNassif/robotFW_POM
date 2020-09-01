@@ -2,7 +2,7 @@
 Resource    ../pages/homePage.robot
 
 *** Variables ***
-#Test Variables
+#Page Contents
 ${firstNameBox}=  //input[@id='firstname']
 ${lastNameBox}=   //input[@id='lastname']
 ${jobTitleBox}=  //input[@id='jobtitle']
