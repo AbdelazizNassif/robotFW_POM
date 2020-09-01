@@ -1,5 +1,7 @@
 # robotFW_POM
 
+Cmd line to execute the test --> robot careersTest.robot feedbackTest.robot xxxx.robot  yyyy.robot  zzzz.robot
+
 -- Implementing POM testing automation model With Robot Framework
 
 To Do Next:
