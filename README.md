@@ -4,6 +4,11 @@
 
 
 
+How To Run?
+-> robot -d reslts careersTest.robot
+-> grouping by tags including--> robot -d reslts -i tag careersTest.robot
+-> grouping by tags excluding--> robot -d reslts -e tag careersTest.robot
+
 
 
 To Do Next:
