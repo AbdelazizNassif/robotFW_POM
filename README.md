@@ -7,7 +7,7 @@ To Do Next:
 Adding Keywords for generating custom data like names and emails ---> Done
 
 
-Using These Keywords inside test data
+Using These data generation Keywords inside test data ----> Done
 
 
 Implementing DDT
