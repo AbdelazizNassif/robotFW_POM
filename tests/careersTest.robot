@@ -21,28 +21,20 @@ Test clicking career link
     Location Should Contain  career
 
 fill career form without uploading CV
-    Generate Test Data
-    send text to element  ${firstNameBox}  ${firstNameData}
-    send text to element  ${lastNameBox}  ${lastNameData}
-    send text to element  ${mobileNumberBox}  ${jobTitleData}
-    send text to element  ${jobTitleBox}  ${mobileNumberData}
-    send text to element  ${emailBox}  ${emailData}
+    Generate Careers Test Data
+    fill careers form boxes
     click from page  ${submitButn}
     Page Should Contain Element  ${cv_ErrMsg}
 
 fill career form and uploading CV
-    Generate Test Data
-    send text to element  ${firstNameBox}  ${firstNameData}
-    send text to element  ${lastNameBox}  ${lastNameData}
-    send text to element  ${mobileNumberBox}  ${jobTitleData}
-    send text to element  ${jobTitleBox}  ${mobileNumberData}
-    send text to element  ${emailBox}  ${emailData}
+    Generate Careers Test Data
+    fill careers form boxes
     upload cv to career form
     click from page  ${submitButn}
     Location Should Contain  ${firstNameData}
 
 *** Keywords ***
-Generate Test Data
+Generate Careers Test Data
     ${firstNameData}=  genTestData.generateRandomPersonName  7
     Set Global Variable  ${firstNameData}
     ${lastNameData}=  genTestData.generateRandomPersonName  5
@@ -56,12 +48,17 @@ Generate Test Data
     #Set Global Variable  ${firstNameData}   ${lastNameData}  ${jobTitleData}   ${mobileNumberData}  ${emailData}
 
 
+fill careers form boxes
+    send text to element  ${firstNameBox}  ${firstNameData}
+    send text to element  ${lastNameBox}  ${lastNameData}
+    send text to element  ${mobileNumberBox}  ${jobTitleData}
+    send text to element  ${jobTitleBox}  ${mobileNumberData}
+    send text to element  ${emailBox}  ${emailData}
+
 Navigate To Homepage
     Open Browser  ${aut_Url}  ${browser}
     Maximize Browser Window
-    Set Selenium Implicit Wait 	${imp_wait}
-    Set Selenium Speed  ${sele_speed}
-    #Generate Test Data
+    configure selenium general options
 
 Exit These Tests
     Close Browser
