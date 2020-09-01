@@ -1,23 +1,16 @@
 *** Settings ***
 Resource    ../pages/homePage.robot
 Resource    ../pages/feedbackPage.robot
+Resource    ../testDataGenerator/genTestData.robot
+Resource    testBase.robot
 
 Suite Setup  Run Keywords   Navigate To Homepage
 Suite Teardown  Exit These Tests
 
 *** Variables ***
 #Test Environment
-${aut_Url}=  https://www.otlob.com/egypt
-${browser}=  chrome
-${imp_wait}=  10
+${review}=
 
-#Test Data
-${extremeSatisfac}=  //div[@class='exp extreme']//button[contains(text(), 'Extremely Satisfied')]
-${effort_2}=  //html//body//section//div[2]//div//div[1]//section[2]//div[2]//div[2]//button
-${recommend_8}=  //html//body//section//div[2]//div//div[1]//section[3]//div[2]//div[9]//button
-${reviewBox}=  //textarea[@id='feedback-text']
-${submitButton}=  //button[@id='submit-feedback']
-${reCap_ErrMsg}=  //p[@id='feedback-recaptcha-error']
 
 
 *** Test Cases ***
@@ -26,18 +19,27 @@ Test clicking feedback link
     Location Should Contain  feedback
 
 Test filling feedback form without reCaptcha
+    Generate feedback Test Data
     click from page  ${extremeSatisfac}
     click from page  ${effort_2}
     click from page  ${recommend_8}
-    click from page  ${reviewBox}
+    Send text to element  ${reviewBox}  ${review}
+    scroll to element  ${submitButton}
     click from page  ${submitButton}
     Page Should Contain Element  ${reCap_ErrMsg}
 
 *** Keywords ***
+Generate feedback Test Data
+    ${review}=  genTestData.addReviewOrComment  Fname  Fname@email.com  Mac.  The Service is good
+    Set Global Variable  ${review}
+
 Navigate To Homepage
     Open Browser  ${aut_Url}  ${browser}
     Maximize Browser Window
-    Set Selenium Implicit Wait 	${imp_wait}
+    configure selenium general options
 
 Exit These Tests
     Close Browser
+
+
+

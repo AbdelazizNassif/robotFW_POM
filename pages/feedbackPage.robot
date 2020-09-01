@@ -2,17 +2,13 @@
 Resource    ../pages/homePage.robot
 
 *** Variables ***
-#Test Variables
-${firstNameBox}=  //input[@id='firstname']
-${lastNameBox}=   //input[@id='lastname']
-${jobTitleBox}=  //input[@id='jobtitle']
-${mobileNumberBox}=  //input[@id='mobile']
-${emailBox}=  //input[@id='email']
-${submitButn}=  //button[@class='btn p-x-lg green text-uppercase' and contains(text(),'Submit' )]
-${cv_uploader}=  //input[@id='cvfile']
-${cv_path}=  C:\\Users\\AbdElAziz\\PycharmProjects\\POM_robotFW\\uploads\\emptyCV.txt
-${cv_ErrMsg}=  //label[@id='cvfile-error' and contains(text(), 'This field is required.')]
-
+#Page Contents
+${extremeSatisfac}=  //div[@class='exp extreme']//button[contains(text(), 'Extremely Satisfied')]
+${effort_2}=  //html//body//section//div[2]//div//div[1]//section[2]//div[2]//div[2]//button
+${recommend_8}=  //html//body//section//div[2]//div//div[1]//section[3]//div[2]//div[9]//button
+${reviewBox}=  //textarea[@id='feedback-text']
+${submitButton}=  //button[@id='submit-feedback']
+${reCap_ErrMsg}=  //p[@id='feedback-recaptcha-error']
 
 *** Keywords ***
 upload cv to career form
