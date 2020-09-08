@@ -11,21 +11,16 @@ How To Run?
 
 
 
-To Do Next:
+How to run it? run the run.bat file containing the terminal lines to execute the tests. you will need to change the first line of it to your directory.
 
-Adding Keywords for generating custom data like names and emails ---> Done
+xplanation:
 
+pages directory:contains robot files with the pages elements.
 
-Using These data generation Keywords to generate test data for test cases----> Done
+uploads directory:contains data to be used in the test scenarios.
 
+testDataGenerator directory: contains robot file to generate random data for the tests like phone numbers, emails, names, ... etc. .
 
-Grouping the tests 
+tests directory: contains robot file/s to use the tests steps and scenarios to be run.
 
-
-Implementing DDT
-
-
-Integrating with Jenking CI 
-
-
-Integrating with Docker
+what to be added in the future ?? Jenkins integration, docker integration, DDT design.
